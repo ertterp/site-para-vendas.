@@ -14,3 +14,12 @@ body {
     left: 0;
     z-index: 1000;
 }
+
+.item {
+  position: absolute;
+  top: 0;            
+  right: 0;          
+  background-color: #f0f0f0; 
+  padding: 10px;    
+  border: 1px solid #ccc; 
+}
