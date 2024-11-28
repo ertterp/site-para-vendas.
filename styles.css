@@ -16,9 +16,13 @@ body {
 }
 
 .item {
-  list-style: none;
-  margin: 0;
-  padding: 0%;
   display: flex;
-  gap: 15px;
+  justify-content: flex-end; 
+  align-items: center; 
+  position: absolute; 
+  top: 0; 
+  right: 0;
+  padding: 10px; 
+  background-color: #f8f9fa; 
+  gap: 15px; 
 }
