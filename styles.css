@@ -9,13 +9,15 @@ body {
     padding: 20px;
     text-align: center;
     width: 100%;
-    position: fixed;  
+    position:relative;  
     top: 0;
     left: 0;
     z-index: 1000;
+    border-radius: 10px 20px;
+    
 }
 
-.item {
+.cb{
   display: flex;
   justify-content: flex-end; 
   align-items: center; 
@@ -26,3 +28,4 @@ body {
   background-color: #ffffff; 
   gap: 15px; 
 }
+
