@@ -19,74 +19,61 @@
             <div class="products">
                 <div class="product" data-name="quadradox">
                     <h2>Quadradox</h2>
-                    <img src= https://quadradox.com/wp-content/uploads/2024/10/3940-BOTAO-1024x1024.png width="350" height="350" alt="quadrado">
-                        
-                    <p> Chinelo resvestido em borracha, super resistente.</p>
+                    <img src="https://quadradox.com/wp-content/uploads/2024/10/3940-BOTAO-1024x1024.png" width="350" height="350" alt="quadrado">
+                    <p>Chinelo revestido em borracha, super resistente.</p>
                     <span>R$93,40</span>
                 </div>
+
                 <div class="product" data-name="Beyblade">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCiWoGFOcGgOTMnnYYsH5alnjJnfG3u_g2YA&s"
-                        alt="Beyblade">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCiWoGFOcGgOTMnnYYsH5alnjJnfG3u_g2YA&s" alt="Beyblade">
                     <h2>Beyblade</h2>
-                    <p>Pião de madeira é um brinquedo clássico que gira com uma corda, estimulando o desenvolvimento
-                        motor infantil.</p>
+                    <p>Pião de madeira é um brinquedo clássico que gira com uma corda, estimulando o desenvolvimento motor infantil.</p>
                     <span>R$ 20,00</span>
                 </div>
 
                 <div class="product" data-name="Pião de madeira">
-                    <img src="https://s3.amazonaws.com/assets.jaweb/vovoantoniobrinquedos/imgProduto/piao_de_madeira_modelo_retro_085558.jpg"
-                        alt="Pião de madeira">
+                    <img src="https://s3.amazonaws.com/assets.jaweb/vovoantoniobrinquedos/imgProduto/piao_de_madeira_modelo_retro_085558.jpg" alt="Pião de madeira">
                     <h2>Pião de madeira</h2>
-                    <p>O pião de madeira é um brinquedo clássico que gira com uma corda, estimulando o desenvolvimento
-                        motor de crianças a partir de 5 anos.
-                        <pan> R$ 50,00</pan>
-                </div>
-                <div class="product" data-name="Yoyo Profissional">
-                    <img src="https://images-americanas.b2w.io/produtos/4427195370/imagens/yoyo-ioio-profissional-magic-t6-aluminio-rolamento-concavo-5-cordas/4427195370_1_large.jpg"
-                        alt="Yoyo Profissional">
-                    <h2>Yoyo Profissional</h2>
-                    <p>Um yoyo profissional ideal para manobras, feito com alumínio e rolamento. Idade recomendada: a
-                        partir de 6 anos.</p>
-                    <span>R$ 72,00</span>
+                    <p>O pião de madeira é um brinquedo clássico que gira com uma corda, estimulando o desenvolvimento motor de crianças a partir de 5 anos.</p>
+                    <span>R$ 50,00</span>
                 </div>
 
-            </div>
+                <div class="product" data-name="Yoyo Profissional">
+                    <img src="https://images-americanas.b2w.io/produtos/4427195370/imagens/yoyo-ioio-profissional-magic-t6-aluminio-rolamento-concavo-5-cordas/4427195370_1_large.jpg" alt="Yoyo Profissional">
+                    <h2>Yoyo Profissional</h2>
+                    <p>Um yoyo profissional ideal para manobras, feito com alumínio e rolamento. Idade recomendada: a partir de 6 anos.</p>
+                    <span>R$ 72,00</span>
+                </div>
             </div>
         </main>
     </section>
+
+    <div id="noResultsMessage" style="display:none; text-align:center; color:red;">Nenhum produto encontrado.</div>
+
     <script>
         function filterProducts() {
             const searchBar = document.getElementById('searchBar');
             const filter = searchBar.value.toLowerCase();
             const products = document.querySelectorAll('.product');
+            let found = false;
 
             products.forEach(product => {
                 const productName = product.getAttribute('data-name').toLowerCase();
                 if (productName.indexOf(filter) > -1) {
                     product.style.display = '';
+                    found = true;
                 } else {
                     product.style.display = 'none';
                 }
             });
-        }
 
-        products.forEach(product => {
-            const productName = product.getAttribute('data-name').toLowerCase();
-            if (productName.indexOf(filter) > -1) {
-                product.style.display = '';
-                found = true;
+            const noResultsMessage = document.getElementById('noResultsMessage');
+            if (!found && filter !== "") {
+                noResultsMessage.style.display = 'block';
             } else {
-                product.style.display = 'none';
+                noResultsMessage.style.display = 'none';
             }
-        });
-
-
-        if (!found && filter !== "") {
-            noResultsMessage.style.display = 'block'
-        } else {
-            noResultsMessage.style.display = 'none';
         }
-
     </script>
 </body>
 
