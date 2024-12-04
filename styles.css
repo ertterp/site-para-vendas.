@@ -54,8 +54,7 @@ header input {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 400px;
-  width: 400px;
+  height: 300px;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
