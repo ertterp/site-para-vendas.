@@ -55,6 +55,7 @@ header input {
   justify-content: space-between;
   align-items: center;
   height: 400px;
+  width: 400px;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
