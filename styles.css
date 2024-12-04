@@ -64,7 +64,7 @@ header input {
 }
 
 .product img {
-  width: 100%;
+  width: 200px;
   height: auto;
   border-bottom: 1px solid #444;
   margin-bottom: 10px;
