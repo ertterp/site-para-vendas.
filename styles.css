@@ -105,3 +105,8 @@ header input {
   text-align: right;
   
 }
+
+img {
+ width: 150px; 
+ height: 150px; 
+}
