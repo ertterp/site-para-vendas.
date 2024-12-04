@@ -14,7 +14,7 @@
         <input type="text" id="searchBar" placeholder="Pesquise produtos..." onkeyup="filterProducts()">
     </header>
 
-   
+
     <section class="Brinquedos">
         <h2>Brinquedos para Crianças</h2>
         <p>Confira os brinquedos divertidos para todas as idades, perfeitos para entreter e educar!</p>
@@ -27,14 +27,17 @@
                     <img src="https://images-americanas.b2w.io/produtos/3519618237/imagens/bat-beg-bat-bat-bag-bate-bate-bolimbolacho-85-unidades/3519618245_1_large.jpg"
                         alt="Bate-bate">
                     <h2>Bate-bate</h2>
-                    <p>O Bate-bate é a nova mania de diversão para todas as idades, inspirado no clássico Bate-bate. Enviado desmontado e em cores sortidas, é ideal para crianças a partir de 5 anos. Estrutura em plástico resistente.</p>
+                    <p>O Bate-bate é a nova mania de diversão para todas as idades, inspirado no clássico Bate-bate.
+                        Enviado desmontado e em cores sortidas, é ideal para crianças a partir de 5 anos. Estrutura em
+                        plástico resistente.</p>
                     <span>R$ 17,99</span>
                 </div>
                 <div class="product" data-name="Beyblade">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCiWoGFOcGgOTMnnYYsH5alnjJnfG3u_g2YA&s"
                         alt="Beyblade">
                     <h2>Beyblade</h2>
-                    <p>A Beyblade é um pião de batalha rápido e durável, perfeito para competições em arenas e brincadeiras desafiadoras entre amigos. Recomendado para crianças a partir de 6 anos.</p>
+                    <p>A Beyblade é um pião de batalha rápido e durável, perfeito para competições em arenas e
+                        brincadeiras desafiadoras entre amigos. Recomendado para crianças a partir de 6 anos.</p>
                     <span>R$ 20,00</span>
                 </div>
 
@@ -42,18 +45,20 @@
                     <img src="https://s3.amazonaws.com/assets.jaweb/vovoantoniobrinquedos/imgProduto/piao_de_madeira_modelo_retro_085558.jpg"
                         alt="Pião de madeira">
                     <h2>Pião de madeira</h2>
-                    <p>Um pião de madeira é um brinquedo cônico que gira sobre uma ponta, feito de madeira maciça. Idade recomendada: a partir de 5 anos.</p>
-                    <span>R$ 50,00</span>
+                    <p> pião de madeira é um brinquedo clássico, feito de madeira maciça, que gira ao ser puxado com uma
+                        corda. Ideal para crianças a partir de 5 anos, ajuda no desenvolvimento motor e oferece diversão
+                        simples e durável.
                 </div>
                 <div class="product" data-name="Yoyo Profissional">
                     <img src="https://images-americanas.b2w.io/produtos/4427195370/imagens/yoyo-ioio-profissional-magic-t6-aluminio-rolamento-concavo-5-cordas/4427195370_1_large.jpg"
                         alt="Yoyo Profissional">
                     <h2>Yoyo Profissional</h2>
-                    <p>Um yoyo profissional ideal para manobras, feito com alumínio e rolamento. Idade recomendada: a partir de 6 anos.</p>
+                    <p>Um yoyo profissional ideal para manobras, feito com alumínio e rolamento. Idade recomendada: a
+                        partir de 6 anos.</p>
                     <span>R$ 72,00</span>
                 </div>
-                
-                </div>
+
+            </div>
             </div>
         </main>
     </section>
@@ -62,7 +67,7 @@
             const searchBar = document.getElementById('searchBar');
             const filter = searchBar.value.toLowerCase();
             const products = document.querySelectorAll('.product');
-            
+
             products.forEach(product => {
                 const productName = product.getAttribute('data-name').toLowerCase();
                 if (productName.indexOf(filter) > -1) {
@@ -72,24 +77,24 @@
                 }
             });
         }
-        
-         products.forEach(product => {
-                const productName = product.getAttribute('data-name').toLowerCase();
-                if (productName.indexOf(filter) > -1) {
-                    product.style.display = ''; 
-                    found = true;
-                } else {
-                    product.style.display = 'none'; 
-                }
-            });
 
-           
-            if (!found && filter !== "") {
-                noResultsMessage.style.display = 'block' 
+        products.forEach(product => {
+            const productName = product.getAttribute('data-name').toLowerCase();
+            if (productName.indexOf(filter) > -1) {
+                product.style.display = '';
+                found = true;
             } else {
-                noResultsMessage.style.display = 'none'; 
+                product.style.display = 'none';
             }
-        
+        });
+
+
+        if (!found && filter !== "") {
+            noResultsMessage.style.display = 'block'
+        } else {
+            noResultsMessage.style.display = 'none';
+        }
+
     </script>
 </body>
 
