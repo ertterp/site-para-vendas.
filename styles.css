@@ -99,3 +99,10 @@ header input {
       grid-template-columns: 1fr;
   }
 }
+
+.roda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
